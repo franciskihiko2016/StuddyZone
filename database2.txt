@@ -1,0 +1,3 @@
+user: studdyba_table
+DB:  studdyba_mytable
+PASS: a1b2c3d4e5.com

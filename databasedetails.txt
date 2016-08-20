@@ -1,0 +1,14 @@
+databasename:   studdyba_data
+user:  studdyba_study
+pass : kevinomondi6.com
+
+
+
+
+CPANEL
+USERNAME: STUDDYBA
+PASS:kevinomondi6.com
+email:
+kihiko2014@gmail.com
+kevinomondi6.com
+

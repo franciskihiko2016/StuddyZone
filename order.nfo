@@ -1,0 +1,574 @@
+ <?php
+     ob_start();
+	 
+  
+session_start();
+if (!isset($_SESSION['username']) && !isset($_SESSION['password'] )) 
+{
+	header("location:index.php");
+	exit();	
+} else{
+   
+
+     
+	
+
+		
+           
+?>
+
+<!DOCTYPE HTML>
+<html>
+<header>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="stylesoft.css" rel="stylesheet" type="text/css" media="screen" />
+<link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+<link href="css/metro.css" rel="stylesheet">
+    <link href="css/metro-icons.css" rel="stylesheet">
+    <link href="css/metro-responsive.css" rel="stylesheet">
+    <link href="css/metro-schemes.css" rel="stylesheet">
+
+    <link href="css/docs.css" rel="stylesheet">
+
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/metro.js"></script>
+    <script src="js/docs.js"></script>
+    <script src="js/prettify/run_prettify.js"></script>
+    <script src="js/ga.js"></script>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <style>
+        @media screen and (max-width: 640px) {
+            .countdown {
+                font-size: 1rem !important;
+            }
+        }
+    </style>
+</header>
+<body>
+<div class="app-bar fixed-top darcula" data-role="appbar">
+        <a class="app-bar-element branding col-md-push-6"></a>
+        <span class="app-bar-divider col-md-push-6"></span>
+        <ul class="app-bar-menu col-md-push-8">
+            <li class="" ><a href="" style="color:black;">Dashboard</a></li>
+			 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="">Home</a></li>
+            <li><a href=""></a></li>
+            <li>
+                <a href="" class="dropdown-toggle">&nbsp;&nbsp;&nbsp;&nbsp;Orders</a>
+                <ul class="d-menu" data-role="dropdown">
+                    <li><a href="">Completed</a></li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="" class="dropdown-toggle">Uncompleted</a>
+                        <ul class="d-menu" data-role="dropdown">
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li class="divider"></li>
+                            <li><a href=""></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+           
+            <li>
+                
+                <ul class="d-menu" data-role="dropdown">
+                    <li><a href="">ChatOn</a></li>
+                    <li><a href="">Community support</a></li>
+                    <li class="divider"></li>
+                    <li><a href="">About</a></li>
+                </ul>
+            </li>
+			<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome</li>
+			<li>&nbsp;&nbsp;&nbsp;<?php echo $username;?></li>
+			<li>&nbsp;&nbsp;&nbsp;<img src="img/Man 3.png" height="30" width="30"></li>
+        </ul>
+
+        <div class="app-bar-element place-right">
+            <span class="dropdown-toggle"><span class="mif-cog"></span> User Name</span>
+            <div class="app-bar-drop-container padding10 place-right no-margin-top block-shadow fg-dark" data-role="dropdown" data-no-close="true" style="width: 220px">
+                <h2 class="text-light">Quick settings</h2>
+                <ul class="unstyled-list fg-dark">
+                    <li><a href="" class="fg-white1 fg-hover-yellow">Profile</a></li>
+                    <li><a href="" class="fg-white2 fg-hover-yellow">Security</a></li>
+                    <li><a href="" class="fg-white3 fg-hover-yellow">Exit</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<div class="container-fluid">
+    <div class="row">
+	
+	
+	<div class="col-md-12 ">
+	<div class="row">
+	    <div class="col-md-12">
+		</br>
+		</div>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	</div>
+	
+	
+	
+	<!-- body content--->
+	
+	<div class="row">
+	   <div class="col-md-12 " style="background-color:white;color:black;">
+	         <div class="col-md-3"></div>
+	         <div class="col-md-6">this is
+			  
+                   
+					
+	   <div class="tabcontrol2 tabs-bottom" data-role="tabcontrol">
+                            <div class="frames">
+                                <div class="frame" id="frame_6_1">
+								
+								 <form role="form" action="order.php" class="form-horizontal" method="POST" enctype="multipart/form-data" >
+							      <div class="form-group">
+								      <label for="need" class="col-md-4">I need:</label>
+									  <div class="col-md-5">
+									    <select id="product_type" name="product_type" class="product_type" max-width="70px">
+	<option value="Essay">Essay (Any Type)</option>
+	<option value="Article">Article (Any Type)</option>
+	<option value="Content">Content (Any Type)</option>
+	<option value="Admission Essay">Admission Essay</option>
+	<option value="Annotated Bibliography">Annotated Bibliography</option>
+	<option value="Argumentative Essay">Argumentative Essay</option>
+	<option value="Article Review">Article Review</option>
+	<option value="Book/Movie Review">Book/Movie Review</option>
+	<option value="Business Plan">Business Plan</option>
+	<option value="Case Study">Case Study</option>
+	<option value="Coursework">Coursework</option>
+	<option value="Creative Writing">Creative Writing</option>
+	<option value="Critical Thinking">Critical Thinking</option>
+	<option value="Presentation or speech">Presentation or speech</option>
+	<option value="Research Paper">Research Paper</option>
+	<option value="Research Proposal">Research Proposal</option>
+	<option value="Term Paper">Term Paper</option>
+	<option value="Thesis/Dissertation Chapter">Thesis/Dissertation Chapter</option>
+	<option value="Other">Other</option>
+	</select>
+									  </div>
+								  </div>
+								  </br>
+								  
+								   <div class="form-group">
+								      <label for="topic" class="col-md-4">Topic:</label>
+									  <div class="col-md-4">
+									    <input type="text" name="topic" class="form-control " >
+									  </div>
+								  </div>
+								  </br>
+								  </br>
+								   <div class="form-group">
+								      <label for="subject" class="col-md-4">Select your subject:</label>
+									  <div class="col-md-4">
+									    <select name="subject" id="subject">
+	<option value="" disabled="" selected="selected"></option>
+	<option value="Accounting">Accounting</option>
+	<option value="Advertising">Advertising</option>
+	<option value="Aeronautics">Aeronautics</option>
+	<option value="African-American Studies">African-American Studies</option>
+	<option value="Agricultural Studies">Agricultural Studies</option>
+	<option value="Alternative Medicine">Alternative Medicine</option>
+	<option value="American History">American History</option>
+	<option value="American Literature">American Literature</option>
+	<option value="Anthropology">Anthropology</option>
+	<option value="Antique Literature">Antique Literature</option>
+	<option value="Application Essay">Application Essay</option>
+	<option value="Architecture">Architecture</option>
+	<option value="Art">Art</option>
+	<option value="Asian Literature">Asian Literature</option>
+	<option value="Asian Studies">Asian Studies</option>
+	<option value="Astronomy">Astronomy</option>
+	<option value="Aviation">Aviation</option>
+	<option value="Biology">Biology</option>
+	<option value="Business">Business</option>
+	<option value="Canadian Studies">Canadian Studies</option>
+	<option value="Case Study">Case Study</option>
+	<option value="Chemistry">Chemistry</option>
+	<option value="Communication Strategies">Communication Strategies</option>
+	<option value="Communications and Media">Communications and Media</option>
+	<option value="Company Analysis">Company Analysis</option>
+	<option value="Computer Science">Computer Science</option>
+	<option value="Creative Writing">Creative Writing</option>
+	<option value="Criminology">Criminology</option>
+	<option value="Dance">Dance</option>
+	<option value="Design Analysis">Design Analysis</option>
+	<option value="Drama">Drama</option>
+	<option value="E-Commerce">E-Commerce</option>
+	<option value="East European Studies">East European Studies</option>
+	<option value="Economics">Economics</option>
+	<option value="Education">Education</option>
+	<option value="Education Theories">Education Theories</option>
+	<option value="Engineering">Engineering</option>
+	<option value="English">English</option>
+	<option value="English Literature">English Literature</option>
+	<option value="Environmental Issues">Environmental Issues</option>
+	<option value="Ethics">Ethics</option>
+	<option value="Finance">Finance</option>
+	<option value="Geography">Geography</option>
+	<option value="Geology">Geology</option>
+	<option value="Healthcare">Healthcare</option>
+	<option value="History">History</option>
+	<option value="Holocaust">Holocaust</option>
+	<option value="International Affairs/Relations">International Affairs/Relations</option>
+	<option value="Internet">Internet</option>
+	<option value="Investment">Investment</option>
+	<option value="IT Management">IT Management</option>
+	<option value="Journalism">Journalism</option>
+	<option value="Latin-American Studies">Latin-American Studies</option>
+	<option value="Law">Law</option>
+	<option value="Legal Issues">Legal Issues</option>
+	<option value="Linguistics">Linguistics</option>
+	<option value="Literature">Literature</option>
+	<option value="Logistics">Logistics</option>
+	<option value="Management">Management</option>
+	<option value="Marketing">Marketing</option>
+	<option value="Mathematics">Mathematics</option>
+	<option value="Medicine and Health">Medicine and Health</option>
+	<option value="Movies">Movies</option>
+	<option value="Music">Music</option>
+	<option value="Native-American Studies">Native-American Studies</option>
+	<option value="Nature">Nature</option>
+	<option value="Nursing">Nursing</option>
+	<option value="Nutrition">Nutrition</option>
+	<option value="Painting">Painting</option>
+	<option value="Pedagogy">Pedagogy</option>
+	<option value="Pharmacology">Pharmacology</option>
+	<option value="Philosophy">Philosophy</option>
+	<option value="Physics">Physics</option>
+	<option value="Political Science">Political Science</option>
+	<option value="Psychology">Psychology</option>
+	<option value="Public Relations">Public Relations</option>
+	<option value="Religion and Theology">Religion and Theology</option>
+	<option value="Shakespeare Studies">Shakespeare Studies</option>
+	<option value="Sociology">Sociology</option>
+	<option value="Sport">Sport</option>
+	<option value="Teacher's Career">Teacher's Career</option>
+	<option value="Technology">Technology</option>
+	<option value="Theatre">Theatre</option>
+	<option value="Tourism">Tourism</option>
+	<option value="Trade">Trade</option>
+	<option value="Web design">Web design</option>
+	<option value="West European Studies">West European Studies</option>
+	</select>
+									  </div>
+								  </div>
+								  </br>
+								  
+								   <div class="form-group">
+								      <label for="pages" class="col-md-4">No of pages:</label>
+									  <div class="col-md-4">
+									    <input type="number" name="pages" class="form-control setting-input">
+									  </div>
+								  </div>
+								  </br>
+								  
+								  <div class="form-group">
+								      
+									  
+									  <label for="date" class="col-md-4">Deadline:</label>
+									  <div class="col-md-4">
+									    <input type="date" name="deadline" class="form-control" required >
+										
+									  </div>
+								  </div>
+								
+								
+								
+								
+								</br>
+								</br>
+								</br>
+								</br>
+								</br>
+								</br>
+								
+								</div>
+                                <div class="frame" id="frame_6_2">
+								
+								<div class="form-group">
+					 <label> Types of service:</label>
+					 </br>
+					     <select name="services" required>
+						 <option value="" disabled="" selected="selected"></option>
+						     <option value="Writing from Scrach" >Writing from Scrach</option>
+						     <option value="Rewriting" >Rewriting</option>
+						     <option value="Editing" >Editing</option>
+						 </select>
+					</div>
+					       </br>
+							  </br>
+					   <label for="writerlevel"> Writer level:</label></br>
+					       
+									    <label class="input-control radio">
+                            <input type="radio" name="level" value="School" checked>
+                            <span class="check"></span>
+                            <span class="caption">School</span>
+                        </label>
+                        <label class="input-control radio">
+                            <input type="radio" name="level" value="University">
+                            <span class="check"></span>
+                            <span class="caption">University</span>
+                        </label>
+                        <label class="input-control radio">
+                            <input type="radio" name="level" value="Doctor">
+                            <span class="check"></span>
+                            <span class="caption">Doctor</span>
+                        </label>
+                             
+							  </br>
+							  </br>
+							  <div class="form-group">
+							         <label for> Number of cited Resources:</label></br>
+									 <input type="text" name="no_citation"/>
+							  </div> 
+							  </br>
+							  </br>
+							  <div class="form-group">
+							         <label for> Format of citation :</label></br>
+									 <select type="text" name="citationformat">
+									     <option value="noapplicable">Not applicable</option>
+									     <option value="Mla">MLA</option>
+									     <option value="APA">APA</option>
+									     <option value="Chicago/Turabin">Chicago/Turabin</option>
+									     <option value="Others">Others</option>
+									 </select>
+							  </div>
+							  
+								
+								2</div>
+								<div class="frame" id="frame_6_3">
+								
+								<a name="main"></a>
+					   <label>Paper instructions:</label>
+					   <div class="form-group">
+					   <textarea name="instructions" class="form-control"rows="6" >
+					              
+					   
+					   </textarea>
+					   </div>
+					   <div class="form-group">
+                              <input name="files" type="file" class="form-control" />
+					   </div>
+								
+								</div>
+                            </div>
+                            <ul class="tabs tab-bottom align-right" style="align:center">
+                                <li><a href="#frame_6_1">Work detailes</a></li>
+                                <li><a href="#frame_6_2">Work details</a></li>
+                                <li class=""><a href="#frame_6_3">Attach files</a></li>
+                                
+                                <li class=""><button type="submit" class="btn btn-primary" name="orderitems" >Confirm your orders</button></li>
+                            </ul>
+							
+                        </div>
+						<?php
+						require("connection.php");
+						 if(isset($_POST['orderitems']) && isset($_FILES['files']) )
+						 {
+						   $product_type=$_POST['product_type'];
+						   $subject=$_POST['subject'];
+						   $pages=$_POST['pages'];
+						   $deadline=$_POST['deadline'];
+						   $service=$_POST['services'];
+						   $level=$_POST['level'];
+						   $topic=$_POST['topic'];
+						   $status="0";
+						   
+						   $no_citation=$_POST['no_citation'];
+						   $citationformat=$_POST['citationformat'];
+						   $instructions=$_POST['instructions'];
+						   $customer_id=md5($level);
+						   
+						   $order_id=rand();
+						   
+						   $time=time();
+					   $posted_date=date('H:i:s',$time);
+					   $date=date('Y M D',$time);
+					   echo $date;
+					   
+				  
+	        
+					   $name=$_FILES['files']['name'];					  
+					  $size=$_FILES['files']['size'];
+					  $type=$_FILES['files']['type'];
+					  $tmp_name=$_FILES['files']['tmp_name'];
+					  $extension=strtolower(substr($name,strpos($name,'.')+ 1));
+					  $max_size=2097152;
+					  $file = rand(1000,100000)."-".$_FILES['files']['name'];
+                   $file_loc = $_FILES['files']['tmp_name'];
+                   $file_size = $_FILES['files']['size'];
+                    $file_type = $_FILES['files']['type'];
+                   $folder="doc/";
+				   
+				   
+                  
+                  // new file size in KB
+                   $new_size = $file_size/1024;  
+                 // new file size in KB
+ 
+                   // make file name in lower case
+                    $new_file_name = strtolower($file);
+                   // make file name in lower case
+ 
+                    $final_file=str_replace(' ','-',$new_file_name);
+					$code=md5($final_file);
+					  if(!empty ($name))
+					  {
+					    if(($extension=='pdf'|| $extension=='xlsx'|| $extension=='docx') && $size<$max_size)
+						   { echo'uploadeeeed';
+						     
+							  if(move_uploaded_file($file_loc,$folder.$final_file))
+                               {
+                               
+				
+                               ECHO "YES WE CAN
+							    $code
+							   ";
+							  $result = mysql_query("INSERT into orders (customer_need,order_id,subject,no_pages,service_type,writer_level,citation_format,cited_resources,instruction,document
+							  ,customerid,status,deadline,posted_date,topic) VALUES('$product_type','$order_id','$subject',
+						 '$pages','$service','$level','$citationformat','$no_citation','$instructions','$final_file','$customer_id','$status','$deadline','$posted_date','$topic')");
+						          
+								if($result)
+								{
+							
+                                 $_SESSION['order_id']=$order_id;
+                                 $_SESSION['customer_need']=$product_type;
+                                 $_SESSION['subject']=$subject;
+                                 $_SESSION['no_pages']=$pages;
+                                 $_SESSION['service']=$service;
+                                 $_SESSION['writer_level']=$level;
+                                 $_SESSION['citation_format']=$citationformat;
+                                 $_SESSION['cited_resources']=$no_citation;
+                                 $_SESSION['instruction']=$instructions;
+                                 $_SESSION['document']=$final_file;
+                                 $_SESSION['status']=$status;
+                                 $_SESSION['deadline']=$deadline;
+                                 $_SESSION['posted_date']=$posted_date;
+                                 $_SESSION['customer_id']=$customer_id;
+                                 $_SESSION['topic']=$topic;
+                               
+								header("location:order_complete.php");
+								echo "inserted";
+								}
+								else {echo "no once";}
+                               }
+                             else
+                                        {
+                             ?>
+                           <script>
+                          alert('error while uploading file');
+                         window.location.href='index.php?fail';
+                          </script> 
+					  
+                        <?php
+                            }
+							 
+						   }
+						   
+						   else
+						   {
+						   echo 'file must be pdf,docx, or xlsx'
+						     ;}
+					  
+					  } else{echo 'Please choose a file';}
+					   
+					  
+					  
+						   
+						   
+					
+						 
+						 }
+						
+						
+						?>
+						
+						
+                </div>
+				 <div class="col-md-3"></div>
+            </div>
+				   <div class="row">
+     <div class="col-md-12 btn-success" style="background-color:green">
+	 <div class="col-md-2">
+	 </br>
+	 </br>
+	 </br>
+	 </br>
+	 </br>
+	 <a href="#">For Writer</a></br>
+	 <a href="#">For Affiliates</a></br>
+	 <a href="#">Terms of use</a></br>
+	 <a href="#">Privacy Policy</a></br>
+	 <a href="#">FAQ</a></br>
+	 <a href="#">How it work</a></br>
+	 <a href="#">Contacts</a></br>
+	 
+	 
+	 </div>
+	 <div class="col-md-8 aline-center">
+	 <div style=" aline-center">
+	 </br>
+	 </br>
+	 </br>
+	 </br>
+	 </br>
+	                   Use of Studyzone.com complies with educational standards and does not violate any regulations issued by educational institutions. The service is completely LEGAL and can be used for:
+Additional insight into the subject with appropriate detailing of key questions to cover;</br>
+Provision of reasoning for your own statements and further research;</br>
+Paraphrasing according to educational guidelines issued by your college or university in regards to plagiarism and acceptable paraphrase;</br>
+Use of citations (please follow the citation recommendations)
+We value your respect towards copyrights of content provided by our writers.</br>
+The services provided are meant to assist in providing a guideline.</br>
+The services provided are intended to be used for research or study purpose only.</br>
+We accept
+Local Sites
+</br>
+</br>
+</br>
+</div>
+      </div>
+								<div class="col-md-2"></div>
+	 </br>
+	 </br>
+	 </br>
+	 </br>
+	 </br>
+	 </br>
+	 </br>
+	
+	 
+	 </div>
+</div>
+        </div>
+	
+			 </div>
+	        
+	   
+	   </div>
+	</div>
+</div>
+	
+</div>	
+</div>
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
+<?php  ;}?>
